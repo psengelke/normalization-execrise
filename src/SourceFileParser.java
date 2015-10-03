@@ -1,46 +1,18 @@
 import java.util.LinkedList;
 
-/**
- * Parses a source file and produces statistics.
- * @author Paul
- *
- */
-public class SourceFileParser {
-	
-	private SourceFileParser(){}
+public interface SourceFileParser {
 
-	public static int countCodeLines(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int countCodeLines(LinkedList<String> file);
 	
-	public static int countStatements(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int countStatements(LinkedList<String> file);
 	
-	public static int countClasses(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int countClasses(LinkedList<String> file);
 	
-	public static int countFunctions(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int countFunctions(LinkedList<String> file);
 	
-	public static int countComments(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int countComments(LinkedList<String> file);
 	
-	public static int calcAverageStatementsPerClass(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int calcAverageStatementsPerClass(LinkedList<String> file);
 	
-	public static int calcAverageStatementsPerFunction(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int calcAverageStatementsPerFunction(LinkedList<String> file);
 }
