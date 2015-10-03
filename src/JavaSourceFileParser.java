@@ -12,26 +12,15 @@ public class JavaSourceFileParser implements SourceFileParser {
 
 	@Override
 	public int countCodeLines(LinkedList<String> file) {
+		
 		int count = 0;
-		boolean commentOn = false;
-		for (int k = 0; k < file.size(); ++k)
-		{
-			if (file.get(k).contains("/*") && !commentOn)
-			{
-				if (!file.get(k).contains("*/"))
-					commentOn = true;
-				else
-					continue;
-			}
-			else if (file.get(k).contains("*/"))
-			{
-				commentOn = false;
-			}
-			else if (file.get(k).contains("//") || commentOn)
-				continue;
-			else
-				count++;
+		
+		Iterator<String> it = file.iterator();
+		while (it.hasNext()){
+			String line = it.next();
+			if (line.contains("//") || line.contains("*/")) count++;
 		}
+		
 		return count;
 	}
 
@@ -112,7 +101,7 @@ public class JavaSourceFileParser implements SourceFileParser {
 				count++;
 		}
 		
-		return count;
+		return 1;
 	}
 
 	@Override

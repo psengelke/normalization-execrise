@@ -39,12 +39,35 @@ public class JavaSourceFileParserTester {
 	@Test
 	public void testCountStatements() {
 
+		LinkedList<String> file = new LinkedList<>();
+		file.add("public class Facts {");
+		file.add("// comment");
+		file.add("private void makeFact(){");
+		file.add("int count = 0;");
+		file.add("count = count + 1;");
+		file.add("count = count + 1;");
+		file.add("}");
+		file.add("}");
 		
+		assertEquals(3, new JavaSourceFileParser().countStatements(file));
 	}
 
 	@Test
 	public void testCountClasses() {
-		fail("Not yet implemented");
+
+		LinkedList<String> file = new LinkedList<>();
+		file.add("public class Facts {");
+		file.add("// comment");
+		file.add("private void makeFact(){");
+		file.add("int count = 0;");
+		file.add("count = count + 1;");
+		file.add("count = count + 1;");
+		file.add("}");
+		file.add("private class bob {}");
+		file.add("private class jess {}");
+		file.add("}");
+		
+		assertEquals(3, new JavaSourceFileParser().countClasses(file));
 	}
 
 	@Test
@@ -60,7 +83,22 @@ public class JavaSourceFileParserTester {
 
 	@Test
 	public void testCountComments() {
-		fail("Not yet implemented");
+		
+		LinkedList<String> file = new LinkedList<>();
+		file.add("public class Facts {");
+		file.add("// comment");
+		file.add("// comment");
+		file.add("// comment");
+		file.add("private void makeFact(){");
+		file.add("int count = 0;");
+		file.add("count = count + 1;");
+		file.add("count = count + 1;");
+		file.add("}");
+		file.add("private class bob {}");
+		file.add("private class jess {}");
+		file.add("}");
+		
+		assertEquals(3, new JavaSourceFileParser().countComments(file));
 	}
 
 	@Test
