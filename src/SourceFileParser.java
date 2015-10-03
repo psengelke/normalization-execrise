@@ -1,84 +1,18 @@
 import java.util.LinkedList;
 
-/**
- * Parses a source file and produces statistics.
- * @author Paul
- *
- */
-public class SourceFileParser {
-	
-	private SourceFileParser(){}
+public interface SourceFileParser {
 
-	public static int countCodeLines(LinkedList<String> file){
-		int count = 0;
-		boolean commentOn = false;
-		for (int k = 0; k < file.size(); ++k)
-		{
-			if (file.get(k).contains("/*") && !commentOn)
-			{
-				if (!file.get(k).contains("*/"))
-					commentOn = true;
-				else
-					continue;
-			}
-			else if (file.get(k).contains("*/"))
-			{
-				commentOn = false;
-			}
-			else if (file.get(k).contains("//") || commentOn)
-				continue;
-			else
-				count++;
-		}
-		return count;
-	}
+	public int countCodeLines(LinkedList<String> file);
 	
-	public static int countStatements(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int countStatements(LinkedList<String> file);
 	
-	public static int countClasses(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int countClasses(LinkedList<String> file);
 	
-	public static int countFunctions(LinkedList<String> file){
-		
-		return 0;
-	}
+	public int countFunctions(LinkedList<String> file);
 	
-	public static int countComments(LinkedList<String> file)
-	{
-		int count = 0;
-		boolean commentOn = false;
-		for (int k = 0; k < file.size(); ++k)
-		{
-			if (file.get(k).contains("/*") && !commentOn)
-			{
-				if (!file.get(k).contains("*/"))
-					commentOn = true;
-				else
-					count++;
-			}
-			else if (file.get(k).contains("*/") && commentOn)
-			{
-				commentOn = false;
-				count++;
-			}
-			else if (file.get(k).contains("//") && !commentOn)
-				count++;
-		}
-		return count;
-	}
+	public int countComments(LinkedList<String> file);
+
+	public float calcAverageStatementsPerClass(LinkedList<String> file);
 	
-	public static int calcAverageStatementsPerClass(LinkedList<String> file){
-		
-		return 0;
-	}
-	
-	public static int calcAverageStatementsPerFunction(LinkedList<String> file){
-		
-		return 0;
-	}
+	public float calcAverageStatementsPerFunction(LinkedList<String> file);
 }
