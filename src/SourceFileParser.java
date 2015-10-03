@@ -14,24 +14,19 @@ public class SourceFileParser {
 		boolean commentOn = false;
 		for (int k = 0; k < file.size(); ++k)
 		{
-			if (file.get(k).contains("//") || commentOn)
-				continue;
-			else if (file.get(k).contains("/*"))
+			if (file.get(k).contains("/*") && !commentOn)
 			{
 				if (!file.get(k).contains("*/"))
-				{
 					commentOn = true;
-					continue;
-				}
 				else
 					continue;
-				
 			}
 			else if (file.get(k).contains("*/"))
 			{
 				commentOn = false;
-				continue;
 			}
+			else if (file.get(k).contains("//") || commentOn)
+				continue;
 			else
 				count++;
 		}
@@ -53,9 +48,28 @@ public class SourceFileParser {
 		return 0;
 	}
 	
-	public static int countComments(LinkedList<String> file){
-		
-		return 0;
+	public static int countComments(LinkedList<String> file)
+	{
+		int count = 0;
+		boolean commentOn = false;
+		for (int k = 0; k < file.size(); ++k)
+		{
+			if (file.get(k).contains("/*") && !commentOn)
+			{
+				if (!file.get(k).contains("*/"))
+					commentOn = true;
+				else
+					count++;
+			}
+			else if (file.get(k).contains("*/") && commentOn)
+			{
+				commentOn = false;
+				count++;
+			}
+			else if (file.get(k).contains("//") && !commentOn)
+				count++;
+		}
+		return count;
 	}
 	
 	public static int calcAverageStatementsPerClass(LinkedList<String> file){
