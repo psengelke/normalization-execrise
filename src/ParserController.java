@@ -98,6 +98,8 @@ public class ParserController {
 		report.add("Average number of statements / class: "+parser.calcAverageStatementsPerClass(file));
 		report.add("Average number of statements per function: "+parser.calcAverageStatementsPerFunction(file));
 		report.add("Lines of comments: "+parser.countComments(file));
+		float[] cc = parser.calcCyclomaticComplex(file);
+		report.add("\nCyclomatic complexity: \nTotal: "+cc[0]+"\nAverage: "+cc[1]);
 
 		return report;
 	}

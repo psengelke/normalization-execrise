@@ -42,19 +42,6 @@ public class CSourceFileParser implements SourceFileParser {
 		
 		return count;
 	}
-
-	//~ @Override
-	//~ public int countClasses(LinkedList<String> file) {
-		//~ int count = 0;
-		//~ for (int k = 0; k < file.size(); ++k)
-		//~ {
-			//~ if (file.get(k).contains("struct"))
-			//~ {
-				//~ count++;
-			//~ }
-		//~ }
-		//~ return count;
-	//~ }
 	
 	/**
 	 * Calculates the number of classes
@@ -98,7 +85,7 @@ public class CSourceFileParser implements SourceFileParser {
 	@Override
 	public int countFunctions(LinkedList<String> file) {
 		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 
 	/**
