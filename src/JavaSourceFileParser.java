@@ -48,14 +48,53 @@ public class JavaSourceFileParser implements SourceFileParser {
 		return count;
 	}
 
+	//~ @Override
+	//~ public int countClasses(LinkedList<String> file) {
+		//~ int count = 0;
+		//~ for (int k = 0; k < file.size(); ++k)
+		//~ {
+			//~ if (file.get(k).contains("class"))
+			//~ {
+				//~ count++;
+			//~ }
+		//~ }
+		//~ return count;
+	//~ }
+	
+	/**
+	 * Calculates the number of classes
+	 * @param file: LinkedList object with file content
+	 * @return int - number of classes
+	 */
 	@Override
 	public int countClasses(LinkedList<String> file) {
 		int count = 0;
+		boolean commentOn = false;
 		for (int k = 0; k < file.size(); ++k)
 		{
-			if (file.get(k).contains("class"))
+			if (file.get(k).contains("/*") && !commentOn)
 			{
-				count++;
+				if (!file.get(k).contains("*/"))
+					commentOn = true;
+				else
+					continue;
+			}
+			else if (file.get(k).contains("*/"))
+			{
+				commentOn = false;
+				if (file.get(k).contains("class"))
+				{
+					count++;
+				}
+			}
+			else if (file.get(k).contains("//") || commentOn)
+				continue;
+			else
+			{
+				if (file.get(k).contains("class"))
+				{
+					count++;
+				}
 			}
 		}
 		return count;
