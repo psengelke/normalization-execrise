@@ -5,8 +5,27 @@ public class CSourceFileParser implements SourceFileParser {
 
 	@Override
 	public int countCodeLines(LinkedList<String> file) {
-		// TODO Auto-generated method stub
-		return 0;
+		int count = 0;
+		boolean commentOn = false;
+		for (int k = 0; k < file.size(); ++k)
+		{
+			if (file.get(k).contains("/*") && !commentOn)
+			{
+				if (!file.get(k).contains("*/"))
+					commentOn = true;
+				else
+					continue;
+			}
+			else if (file.get(k).contains("*/"))
+			{
+				commentOn = false;
+			}
+			else if (file.get(k).contains("//") || commentOn)
+				continue;
+			else
+				count++;
+		}
+		return count;
 	}
 
 	@Override
@@ -26,8 +45,15 @@ public class CSourceFileParser implements SourceFileParser {
 
 	@Override
 	public int countClasses(LinkedList<String> file) {
-		// TODO Auto-generated method stub
-		return 0;
+		int count = 0;
+		for (int k = 0; k < file.size(); ++k)
+		{
+			if (file.get(k).contains("struct"))
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 
 	@Override
