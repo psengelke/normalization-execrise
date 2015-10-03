@@ -69,11 +69,11 @@ public class JavaSourceFileParser implements SourceFileParser {
 		while (it.hasNext()){
 			
 			String line = it.next();
-			if (line.matches("((?:private)|(?:public)|(?:protected))(?:static)(?:final)\\s[_a-zA-z][_a-zA-Z0-9]*\\s\\(([_a-zA-z][_a-zA-Z0-9]*\\s[_a-zA-z][_a-zA-Z0-9]*)[,\\s[_a-zA-z][_a-zA-Z0-9]*]\\)\\s{\\s")) //parameters
+			if (line.matches("((public|private|protected|static|final|native|synchronized|abstract|threadsafe|transient)+\\s)+[_a-zA-z][_a-zA-Z0-9]*\\s+[_a-zA-z][_a-zA-Z0-9]*\\(\\)?\\s*\\{"))
 				count++;
 		}
 		
-		return 0;
+		return count;
 	}
 
 	@Override
@@ -100,11 +100,6 @@ public class JavaSourceFileParser implements SourceFileParser {
 		return count;
 	}
 	
-	/**
-	 * Calculates the average number of statements per class
-	 * @param file: LinkedList object with file content
-	 * @return float
-	 */
 	@Override
 	public float calcAverageStatementsPerClass(LinkedList<String> file) {
 		int noStatements = countStatements(file);
@@ -112,11 +107,6 @@ public class JavaSourceFileParser implements SourceFileParser {
 		return (noStatements/noClass);
 	}
 	
-	/**
-	 * Calculates the average number of statements per function
-	 * @param file: LinkedList object with file content
-	 * @return float
-	 */
 	@Override
 	public float calcAverageStatementsPerFunction(LinkedList<String> file){
 		int noStatements = countStatements(file);

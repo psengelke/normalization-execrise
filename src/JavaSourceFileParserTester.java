@@ -20,17 +20,26 @@ public class JavaSourceFileParserTester {
 
 	@Test
 	public void testJavaSourceFileParser() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
 	public void testCountCodeLines() {
-		fail("Not yet implemented");
+
+		LinkedList<String> file = new LinkedList<>();
+		file.add("public class Facts {");
+		file.add("// comment");
+		file.add("private void makeFact(){}");
+		file.add("}");
+		
+		JavaSourceFileParser parser = new JavaSourceFileParser();
+		assertEquals(3, parser.countCodeLines(file));
 	}
 
 	@Test
 	public void testCountStatements() {
-		fail("Not yet implemented");
+
+		
 	}
 
 	@Test
