@@ -139,7 +139,10 @@ public class CSourceFileParser implements SourceFileParser {
 	public float calcAverageStatementsPerClass(LinkedList<String> file) {
 		int noStatements = countStatements(file);
 		int noClass = countClasses(file);
+		if (noClass != 0)
 		return (noStatements/noClass);
+		else 
+			return 0;
 	}
 	
 	/**
