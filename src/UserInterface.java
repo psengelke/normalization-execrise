@@ -20,6 +20,7 @@ public class UserInterface  implements ActionListener {
 
 	private JTextArea jtAreaOutput;
 	private ParserController pc;
+	private JFilePicker fp;
 	
 	public UserInterface(ParserController pc) {
 		this.pc = pc;
@@ -27,8 +28,21 @@ public class UserInterface  implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+		String filePath = fp.getSelectedFilePath();
+		if (filePath.isEmpty())
+		{
+			jtAreaOutput.setText("");
+			jtAreaOutput.setText("Please select a file to parse");
+		}
+		else
+		{
+			LinkedList<String> result = pc.parseFile(filePath);
+			jtAreaOutput.setText("");
+			String output = "";
+			for (int k = 0; k < result.size(); ++k)
+				output = output + result.get(k) + "\n";
+			jtAreaOutput.setText(output);
+		}
 	}
 	
 	public void initUi() {
@@ -37,9 +51,10 @@ public class UserInterface  implements ActionListener {
 		parseButton.setBounds(100,130, 100, 40);
 		parseButton.addActionListener(this);
 		
-		JFilePicker fp = new JFilePicker("Choose a file to parse: ", "Browse");
+		fp = new JFilePicker("Choose a file to parse: ", "Browse");
 		fp.setBounds(70, 50, 600, 50);
 		fp.setMode(1);
+		
 		
 		jtAreaOutput = new JTextArea(5, 20);
 		jtAreaOutput.setCaretPosition(jtAreaOutput.getDocument()

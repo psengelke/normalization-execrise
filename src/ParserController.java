@@ -29,8 +29,6 @@ public class ParserController {
 		java, c;
 	}
 	
-	
-	
 	public extension determineExtension(String path) {
 		String[] splitPath=path.split(".");
 		if (splitPath[splitPath.length].equals("java"))
