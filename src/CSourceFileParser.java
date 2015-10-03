@@ -140,8 +140,8 @@ public class CSourceFileParser implements SourceFileParser {
 		int noStatements = countStatements(file);
 		int noClass = countClasses(file);
 		if (noClass != 0)
-		return (noStatements/noClass);
-		else 
+			return (noStatements/noClass);
+		else
 			return 0;
 	}
 	
@@ -154,7 +154,9 @@ public class CSourceFileParser implements SourceFileParser {
 	public float calcAverageStatementsPerFunction(LinkedList<String> file){
 		int noStatements = countStatements(file);
 		int noFunc = countFunctions(file);
-		return (noStatements/noFunc);
+		if (noFunc != 0)
+			return (noStatements/noFunc);
+		else return 0;
 	}
 
 	@Override

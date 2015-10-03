@@ -132,14 +132,19 @@ public class JavaSourceFileParser implements SourceFileParser {
 	public float calcAverageStatementsPerClass(LinkedList<String> file) {
 		int noStatements = countStatements(file);
 		int noClass = countClasses(file);
-		return (noStatements/noClass);
+		if (noClass != 0)
+			return (noStatements/noClass);
+		else
+			return 0;
 	}
 	
 	@Override
 	public float calcAverageStatementsPerFunction(LinkedList<String> file){
 		int noStatements = countStatements(file);
 		int noFunc = countFunctions(file);
-		return (noStatements/noFunc);
+		if (noFunc != 0)
+			return (noStatements/noFunc);
+		else return 0;
 	}
 
 	@Override
