@@ -48,11 +48,6 @@ public class JavaSourceFileParser implements SourceFileParser {
 		return count;
 	}
 
-	/**
-	 * Determines the total number of classes
-	 * @param file: LinkedList object with file content
-	 * @return int - number of classes
-	 */
 	@Override
 	public int countClasses(LinkedList<String> file) {
 		int count = 0;

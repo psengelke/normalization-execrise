@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class CSourceFileParser implements SourceFileParser {
@@ -10,8 +11,17 @@ public class CSourceFileParser implements SourceFileParser {
 
 	@Override
 	public int countStatements(LinkedList<String> file) {
-		// TODO Auto-generated method stub
-		return 0;
+
+		int count = 0;
+		Iterator<String> it = file.iterator();
+		
+		while (it.hasNext()) {
+			String line = it.next();
+			
+			if (line.contains("#") || line.contains(";")) count++;
+		}
+		
+		return count;
 	}
 
 	@Override
