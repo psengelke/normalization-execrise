@@ -50,4 +50,10 @@ public interface SourceFileParser {
 	 * @return float
 	 */
 	public float calcAverageStatementsPerFunction(LinkedList<String> file);
+	
+	/**
+	 * Calculates the cyclometric complexity of the source file.
+	 * @return The cyclometric complexity.
+	 */
+	public float calcCyclometricComplex();
 }

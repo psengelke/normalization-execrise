@@ -32,11 +32,6 @@ public class CSourceFileParser implements SourceFileParser {
 		return 0;
 	}
 
-	/**
-	 * Calculates the average number of statements per class
-	 * @param file: LinkedList object with file content
-	 * @return float
-	 */
 	@Override
 	public float calcAverageStatementsPerClass(LinkedList<String> file) {
 		int noStatements = countStatements(file);
@@ -44,17 +39,17 @@ public class CSourceFileParser implements SourceFileParser {
 		return (noStatements/noClass);
 	}
 
-	
-	/**
-	 * Calculates the average number of statements per function
-	 * @param file: LinkedList object with file content
-	 * @return float
-	 */
 	@Override
 	public float calcAverageStatementsPerFunction(LinkedList<String> file){
 		int noStatements = countStatements(file);
 		int noFunc = countFunctions(file);
 		return (noStatements/noFunc);
+	}
+
+	@Override
+	public float calcCyclometricComplex() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

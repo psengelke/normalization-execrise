@@ -92,4 +92,10 @@ public class JavaSourceFileParser implements SourceFileParser {
 		return (noStatements/noFunc);
 	}
 
+	@Override
+	public float calcCyclometricComplex() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
