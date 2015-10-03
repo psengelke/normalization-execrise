@@ -1,4 +1,9 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.LinkedList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 /**
  * 
@@ -25,8 +30,27 @@ public class ParserController {
 		return null;
 	}
 	
-	public void main(String[] args){
+	public static void main(String[] args){
 		
-		// instantiate UI
+		JFrame frame = new JFrame();
+		MyActionListener listener = new MyActionListener();
+		JButton parseButton = new JButton("parse");
+		parseButton.setBounds(100,150, 80, 30);
+		parseButton.addActionListener(listener);
+		
+		frame.setSize(400, 500);
+		frame.setLayout(null);
+		frame.setVisible(true);
+	}
+	
+	public class MyActionListener implements ActionListener
+	{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
 	}
 }
