@@ -63,7 +63,16 @@ public class JavaSourceFileParser implements SourceFileParser {
 
 	@Override
 	public int countFunctions(LinkedList<String> file) {
-		// TODO Auto-generated method stub
+
+		int count = 0;
+		Iterator<String> it = file.iterator();
+		while (it.hasNext()){
+			
+			String line = it.next();
+			if (line.matches("((?:private)|(?:public)|(?:protected))(?:static)(?:final)\\s[_a-zA-z][_a-zA-Z0-9]*\\s\\(([_a-zA-z][_a-zA-Z0-9]*\\s[_a-zA-z][_a-zA-Z0-9]*)[,\\s[_a-zA-z][_a-zA-Z0-9]*]\\)\\s{\\s")) //parameters
+				count++;
+		}
+		
 		return 0;
 	}
 
