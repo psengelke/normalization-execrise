@@ -33,13 +33,13 @@ public class CSourceFileParser implements SourceFileParser {
 	}
 
 	@Override
-	public int calcAverageStatementsPerClass(LinkedList<String> file) {
+	public float calcAverageStatementsPerClass(LinkedList<String> file) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int calcAverageStatementsPerFunction(LinkedList<String> file) {
+	public float calcAverageStatementsPerFunction(LinkedList<String> file) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

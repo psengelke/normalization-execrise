@@ -76,16 +76,29 @@ public class JavaSourceFileParser implements SourceFileParser {
 		return count;
 	}
 
+	/**
+	 * Calculates the average number of statements per class
+	 * @param file: LinkedList object with file content
+	 * @return float
+	 */
 	@Override
-	public int calcAverageStatementsPerClass(LinkedList<String> file) {
-		// TODO Auto-generated method stub
-		return 0;
+	public float calcAverageStatementsPerClass(LinkedList<String> file) {
+		int noStatements = countStatements(file);
+		int noClass = countClasses(file);
+		return (noStatements/noClass);
 	}
 
+	
+	/**
+	 * Calculates the average number of statements per function
+	 * @param file: LinkedList object with file content
+	 * @return float
+	 */
 	@Override
-	public int calcAverageStatementsPerFunction(LinkedList<String> file) {
-		// TODO Auto-generated method stub
-		return 0;
+	public float calcAverageStatementsPerFunction(LinkedList<String> file){
+		int noStatements = countStatements(file);
+		int noFunc = countFunctions(file);
+		return (noStatements/noFunc);
 	}
 
 }

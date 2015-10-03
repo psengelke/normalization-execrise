@@ -11,8 +11,8 @@ public interface SourceFileParser {
 	public int countFunctions(LinkedList<String> file);
 	
 	public int countComments(LinkedList<String> file);
+
+	public float calcAverageStatementsPerClass(LinkedList<String> file);
 	
-	public int calcAverageStatementsPerClass(LinkedList<String> file);
-	
-	public int calcAverageStatementsPerFunction(LinkedList<String> file);
+	public float calcAverageStatementsPerFunction(LinkedList<String> file);
 }
