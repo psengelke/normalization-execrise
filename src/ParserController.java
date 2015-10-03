@@ -77,7 +77,7 @@ public class ParserController {
 		LinkedList<String> file = SourceFileReader.readSourceFile(temp);
 		LinkedList<String> report = new LinkedList<>();
 		
-		SourceFileParser parser = new JavaSourceFileParser();
+		SourceFileParser parser = (determineExtension(path) == extension.java)?new JavaSourceFileParser(): new CSourceFileParser();
 		
 		report.add("Number of lines of code: "+parser.countCodeLines(file));
 		report.add("Number of statements: "+parser.countStatements(file));
