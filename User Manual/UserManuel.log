@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.26)  3 OCT 2015 10:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.26)  3 OCT 2015 10:58
 entering extended mode
 **UserManuel.tex
 
-("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\User Manual\
-UserManuel.tex"
+("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\normalizatio
+n-execrise\User Manual\UserManuel.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -243,8 +243,8 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
-("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\User Manual\
-UserManuel.aux")
+("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\normalizatio
+n-execrise\User Manual\UserManuel.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
@@ -259,7 +259,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen113
@@ -287,8 +288,8 @@ LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
 LaTeX Info: Redefining \nameref on input line 17.
 
-("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\User Manual\
-title_page.tex"
+("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\normalizatio
+n-execrise\User Manual\title_page.tex"
 <images/University_of_Pretoria_Logo.png, id=3, 900.36375pt x 269.50688pt>
 File: images/University_of_Pretoria_Logo.png Graphic file (type png)
 
@@ -315,11 +316,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Jessica/UniversityModu
-les/2015/Semester1/COS301/Normalization/User Manual/images/University_of_Pretor
-ia_Logo.png> <C:/Jessica/UniversityModules/2015/Semester1/COS301/Normalization/
-User Manual/images/Logo.jpg>])
-("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\User Manual\
-UserManuel.toc"
+les/2015/Semester1/COS301/Normalization/normalization-execrise/User Manual/imag
+es/University_of_Pretoria_Logo.png> <C:/Jessica/UniversityModules/2015/Semester
+1/COS301/Normalization/normalization-execrise/User Manual/images/Logo.jpg>])
+("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\normalizatio
+n-execrise\User Manual\UserManuel.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 7.
 )
@@ -337,37 +338,68 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
 
-[2]
+<images/home.png, id=36, 605.26125pt x 213.79875pt>
+File: images/home.png Graphic file (type png)
+ <use images/home.png>
+Package pdftex.def Info: images/home.png used on input line 51.
+(pdftex.def)             Requested size: 100.37537pt x 35.4547pt.
+
+[2] <images/browse.png, id=43, 389.95688pt x 277.035pt>
+File: images/browse.png Graphic file (type png)
+
+<use images/browse.png>
+Package pdftex.def Info: images/browse.png used on input line 53.
+(pdftex.def)             Requested size: 100.37537pt x 71.30876pt.
+ <images/select.png, id=44, 387.69844pt x 275.52937pt>
+File: images/select.png Graphic file (type png)
+
+<use images/select.png>
+Package pdftex.def Info: images/select.png used on input line 55.
+(pdftex.def)             Requested size: 100.37537pt x 71.33324pt.
+ <images/parse.png, id=45, 606.01407pt x 201.75375pt>
+File: images/parse.png Graphic file (type png)
+
+<use images/parse.png>
+Package pdftex.def Info: images/parse.png used on input line 57.
+(pdftex.def)             Requested size: 100.37537pt x 33.41414pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
+[3 <C:/Jessica/UniversityModules/2015/Semester1/COS301/Normalization/normalizat
+ion-execrise/User Manual/images/home.png> <C:/Jessica/UniversityModules/2015/Se
+mester1/COS301/Normalization/normalization-execrise/User Manual/images/browse.p
+ng> <C:/Jessica/UniversityModules/2015/Semester1/COS301/Normalization/normaliza
+tion-execrise/User Manual/images/select.png> <C:/Jessica/UniversityModules/2015
+/Semester1/COS301/Normalization/normalization-execrise/User Manual/images/parse
+.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
-[3]
+ [4]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
 
-("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\User Manual\
-UserManuel.aux")
+("C:\Jessica\UniversityModules\2015\Semester1\COS301\Normalization\normalizatio
+n-execrise\User Manual\UserManuel.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 81.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 6298 strings out of 493921
- 93129 string characters out of 3147285
- 185038 words of memory out of 3000000
- 9525 multiletter control sequences out of 15000+200000
+ 6319 strings out of 493921
+ 93761 string characters out of 3147285
+ 184038 words of memory out of 3000000
+ 9541 multiletter control sequences out of 15000+200000
  8819 words of font info for 31 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,7n,30p,933b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,7n,30p,933b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on UserManuel.pdf (4 pages, 339296 bytes).
+Output written on UserManuel.pdf (5 pages, 387215 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
