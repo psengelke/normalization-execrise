@@ -37,26 +37,17 @@ public class ParserController {
 		Random rng=new Random();
 		Integer rand=rng.nextInt(500);
 		String newpath=path+rand;
-		/*if (determineExtension(path)==extension.java)
-			command="AStyle.exe --style=java < "+path+" > "+newpath;
-		else
-			if (determineExtension(path)==extension.c)
-				command="AStyle.exe --style=allman < "+path+" > "+newpath;
-			else
-				System.out.println("Unrecognized extension");*/
 
 		StringBuffer output=new StringBuffer();
 		ProcessBuilder builder = null;
 		Process p;
 
 		try {
-			//				p=Runtime.getRuntime().exec(command);
-			//				System.out.println(command);
 			if (determineExtension(path)==extension.java)
 				builder=new ProcessBuilder("AStyle.exe", "--style=java");
 			else
 				if (determineExtension(path)==extension.c)
-					builder=new ProcessBuilder("AStyle.exe", "--style=c");
+					builder=new ProcessBuilder("AStyle.exe", "--style=allman");
 			if (builder!=null) {
 				builder.redirectInput(new File(path));
 				builder.redirectOutput(new File(newpath));
