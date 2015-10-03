@@ -90,11 +90,11 @@ public class ParserController {
 		return report;
 	}
 	
-<<<<<<< HEAD
-	public static void main(String[] args){
+	public static void main(){
 		
 		JFrame frame = new JFrame();
-		MyActionListener listener = new MyActionListener();
+		ParserController pc = new ParserController();
+		MyActionListener listener = pc.new MyActionListener();
 		JButton parseButton = new JButton("parse");
 		parseButton.setBounds(100,150, 80, 30);
 		parseButton.addActionListener(listener);
@@ -112,13 +112,5 @@ public class ParserController {
 			// TODO Auto-generated method stub
 			
 		}
-=======
-	/**
-	 * Entry point.
-	 * @param args
-	 */
-	public void main(){
->>>>>>> origin/master
-		
 	}
 }
