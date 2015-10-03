@@ -19,7 +19,12 @@ import javax.swing.filechooser.FileFilter;
 public class UserInterface  implements ActionListener {
 
 	private JTextArea jtAreaOutput;
+	private ParserController pc;
 	
+	public UserInterface(ParserController pc) {
+		this.pc = pc;
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

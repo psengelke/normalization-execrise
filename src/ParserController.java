@@ -102,7 +102,7 @@ public class ParserController {
 	
 	public static void main(String[] args){
 		ParserController pc = new ParserController();
-		UserInterface ui = new UserInterface();
+		UserInterface ui = new UserInterface(pc);
 		ui.initUi();
 		
 	}
