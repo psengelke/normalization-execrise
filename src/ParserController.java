@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 
 /**
  * 
@@ -7,6 +8,25 @@
  *
  */
 public class ParserController {
-
 	
+	private String makeStandardFile(String path){
+		
+		
+		
+		return null;
+	}
+	
+	public LinkedList<String> parseFile(String path){
+		
+		String temp = makeStandardFile(path);
+		
+		LinkedList<String> file = SourceFileReader.readSourceFile(temp);
+		
+		return null;
+	}
+	
+	public void main(String[] args){
+		
+		// instantiate UI
+	}
 }

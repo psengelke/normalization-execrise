@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 
 /**
  * Parses a source file and produces statistics.
@@ -8,37 +9,37 @@ public class SourceFileParser {
 	
 	private SourceFileParser(){}
 
-	public static int countCodeLines(){
+	public static int countCodeLines(LinkedList<String> file){
 		
 		return 0;
 	}
 	
-	public static int countStatements(){
+	public static int countStatements(LinkedList<String> file){
 		
 		return 0;
 	}
 	
-	public static int countClasses(){
+	public static int countClasses(LinkedList<String> file){
 		
 		return 0;
 	}
 	
-	public static int countFunctions(){
+	public static int countFunctions(LinkedList<String> file){
 		
 		return 0;
 	}
 	
-	public static int countComments(){
+	public static int countComments(LinkedList<String> file){
 		
 		return 0;
 	}
 	
-	public static int calcAverageStatementsPerClass(){
+	public static int calcAverageStatementsPerClass(LinkedList<String> file){
 		
 		return 0;
 	}
 	
-	public static int calcAverageStatementsPerFunction(){
+	public static int calcAverageStatementsPerFunction(LinkedList<String> file){
 		
 		return 0;
 	}
