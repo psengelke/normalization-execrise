@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -37,9 +38,14 @@ public class JavaSourceFileParser implements SourceFileParser {
 	@Override
 	public int countStatements(LinkedList<String> file) {
 
+		int count = 0;
+		Iterator<String> it = file.iterator();
+		while (it.hasNext()){
+			
+			if (it.next().contains(";")) count++;
+		}
 		
-		
-		return 0;
+		return count;
 	}
 
 	/**
