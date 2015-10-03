@@ -18,8 +18,14 @@ public class SourceFileParser {
 				continue;
 			else if (file.get(k).contains("/*"))
 			{
-				commentOn = true;
-				continue;
+				if (!file.get(k).contains("*/"))
+				{
+					commentOn = true;
+					continue;
+				}
+				else
+					continue;
+				
 			}
 			else if (file.get(k).contains("*/"))
 			{
