@@ -72,13 +72,25 @@ public class SourceFileParser {
 		return count;
 	}
 	
-	public static int calcAverageStatementsPerClass(LinkedList<String> file){
-		
-		return 0;
+	/**
+	 * Calculates the average number of statements per class
+	 * @param file: LinkedList object with file content
+	 * @return float
+	 */
+	public static float calcAverageStatementsPerClass(LinkedList<String> file){
+		int noStatements = countStatements(file);
+		int noClass = countClasses(file);
+		return (noStatements/noClass);
 	}
 	
-	public static int calcAverageStatementsPerFunction(LinkedList<String> file){
-		
-		return 0;
+	/**
+	 * Calculates the average number of statements per function
+	 * @param file: LinkedList object with file content
+	 * @return float
+	 */
+	public static float calcAverageStatementsPerFunction(LinkedList<String> file){
+		int noStatements = countStatements(file);
+		int noFunc = countFunctions(file);
+		return (noStatements/noFunc);
 	}
 }
