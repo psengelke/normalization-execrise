@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -36,14 +37,28 @@ public class JavaSourceFileParser implements SourceFileParser {
 
 	@Override
 	public int countStatements(LinkedList<String> file) {
-		// TODO Auto-generated method stub
-		return 0;
+
+		int count = 0;
+		Iterator<String> it = file.iterator();
+		while (it.hasNext()){
+			
+			if (it.next().contains(";")) count++;
+		}
+		
+		return count;
 	}
 
 	@Override
 	public int countClasses(LinkedList<String> file) {
-		// TODO Auto-generated method stub
-		return 0;
+		int count = 0;
+		for (int k = 0; k < file.size(); ++k)
+		{
+			if (file.get(k).contains("class"))
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 
 	@Override
@@ -75,7 +90,7 @@ public class JavaSourceFileParser implements SourceFileParser {
 		}
 		return count;
 	}
-
+	
 	/**
 	 * Calculates the average number of statements per class
 	 * @param file: LinkedList object with file content
@@ -87,7 +102,6 @@ public class JavaSourceFileParser implements SourceFileParser {
 		int noClass = countClasses(file);
 		return (noStatements/noClass);
 	}
-
 	
 	/**
 	 * Calculates the average number of statements per function
@@ -99,6 +113,18 @@ public class JavaSourceFileParser implements SourceFileParser {
 		int noStatements = countStatements(file);
 		int noFunc = countFunctions(file);
 		return (noStatements/noFunc);
+	}
+
+	@Override
+	public float[] calcCyclomaticComplex(LinkedList<String> file) {
+		float[] complexity=new float[2];
+		complexity[0]=1;
+		
+		int returns=0;
+		
+//		for (int i)
+		
+		return complexity;
 	}
 
 }

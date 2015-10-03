@@ -3,7 +3,8 @@ import java.io.FileReader;
 import java.util.LinkedList;
 
 public class SourceFileReader {
-	
+	public SourceFileReader() {}
+		
 	/**
 	 * Opens the source file and reads the contents into a linked list
 	 * @param filePath: file path of the specific file
