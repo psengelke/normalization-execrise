@@ -92,7 +92,28 @@ public class CSourceFileParser implements SourceFileParser {
 	@Override
 	public float[] calcCyclomaticComplex(LinkedList<String> file) {
 		float[] complexity=new float[2];
-		complexity[0]=1;
+		int methods=countFunctions(file);
+		complexity[0]=methods; //1 for each method
+		
+		int returns=0, selection=0, loop=0, operators=0, exceptions=0;
+		
+		for (int i=0; i<file.size(); i++) {
+			if (file.get(i).contains("return"))
+				returns++;
+			if (file.get(i).contains("if") || file.get(i).contains("else") || file.get(i).contains("case") || file.get(i).contains("default"))
+				selection++;
+			if (file.get(i).contains("for") || file.get(i).contains("while") || file.get(i).contains("do") || file.get(i).contains("break") || file.get(i).contains("continue"))
+				loop++;
+			if (file.get(i).contains("&&") || file.get(i).contains("||") || file.get(i).contains("?") || file.get(i).contains(":"))
+				operators++;
+			if (file.get(i).contains("catch") || file.get(i).contains("finally") || file.get(i).contains("throw") || file.get(i).contains("throws"))
+				exceptions++;
+		}
+		
+		complexity[0]+=returns;
+		complexity[0]-=methods; //subtract each last return in method
+		complexity[0]+=selection+loop+operators+exceptions;
+		complexity[1]=complexity[0]/methods;
 		
 		return complexity;
 	}
