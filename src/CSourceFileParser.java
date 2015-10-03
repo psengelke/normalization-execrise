@@ -36,10 +36,33 @@ public class CSourceFileParser implements SourceFileParser {
 		return 0;
 	}
 
+	/**
+	 * Calculates the number of comments
+	 * @param file: LinkedList object with file content
+	 * @return int: the number of comments
+	 */
 	@Override
 	public int countComments(LinkedList<String> file) {
-		// TODO Auto-generated method stub
-		return 0;
+		int count = 0;
+		boolean commentOn = false;
+		for (int k = 0; k < file.size(); ++k)
+		{
+			if (file.get(k).contains("/*") && !commentOn)
+			{
+				if (!file.get(k).contains("*/"))
+					commentOn = true;
+				else
+					count++;
+			}
+			else if (file.get(k).contains("*/") && commentOn)
+			{
+				commentOn = false;
+				count++;
+			}
+			else if (file.get(k).contains("//") && !commentOn)
+				count++;
+		}
+		return count;
 	}
 	
 	/**
